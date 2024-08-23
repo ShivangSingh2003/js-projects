@@ -25,10 +25,11 @@ if(playGame){
 }
 
 function validateGuess(guess){
-    // 
-     if(guess<1){
+     if(isNaN(guess)){
+        alert('Please enter a valid number')
+     } else if(guess<1){
         alert('Please enter a number greater than 0')
-    }else if(guess>100){
+    } else if(guess>100){
         alert('Please enter a number less than or equal to 100')
     } else{
         prevGuess.push(guess)
@@ -85,7 +86,7 @@ function newGame(){
         guessRemaining.innerHTML = `${10 - numGuess}`
         userInput.removeAttribute('disabled')
         startOver.removeChild(p)
-        
+
         playGame = true
     })
 }
