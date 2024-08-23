@@ -23,15 +23,24 @@ html {
   button {
     background-color: #141414;
     color: #fff;
-    width: 250px;
+    width: 200px;
     height: 50px;
     border-radius: 25px;
-    font-size: 30px;
+    font-size: 20px;
     border-style: none;
     margin-top: 30px;
     /* margin-left: 50px; */
   }
   
+  #subt:hover {
+    cursor: pointer;
+    background-color: rgba(19, 18, 18, 0.612);
+  }
+
+  #newGame:hover {
+    cursor: pointer;
+    background-color: rgba(19, 18, 18, 0.612);
+  }
   #subt {
     background-color: #161616;
     color: #ffffff;

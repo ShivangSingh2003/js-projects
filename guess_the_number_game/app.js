@@ -7,7 +7,7 @@ const guessRemaining = document.querySelector('.lastResult')
 const hint = document.querySelector('.hint')
 const startOver = document.querySelector('.resultParas')
 
-const p = document.createElement('p')
+const p = document.createElement('button')
 
 let prevGuess = []
 let numGuess = 0
@@ -33,7 +33,7 @@ function validateGuess(guess){
         alert('Please enter a number less than or equal to 100')
     } else{
         prevGuess.push(guess)
-        if(numGuess === 9){
+        if(numGuess === 2){
             displayGuess(guess)
             displayMessage(`Game over. The random number was ${randomNumber}.`)
             endGame()
@@ -63,14 +63,14 @@ function displayGuess(guess){
 }
 
 function displayMessage(message){
-    hint.innerHTML = `<h2>${message}</h2>`
+    hint.innerHTML = `<h3>${message}</h2>`
 }
 
 function endGame(){
     userInput.value = ''
     userInput.setAttribute('disabled', '')
     p.classList.add('button')
-    p.innerHTML = '<h2 id="newGame">New Game</h2>'
+    p.innerHTML = '<div id="newGame">New Game</div>'
     startOver.appendChild(p)
     playGame = false
     newGame()
