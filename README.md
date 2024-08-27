@@ -1,2 +1,2 @@
 # projects
-A repository for my web projects
+A repository for my Javascript projects
